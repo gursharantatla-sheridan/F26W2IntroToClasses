@@ -12,6 +12,8 @@ namespace F26W2IntroToClasses
         // propg
         public int MyProperty { get; private set; }
 
+
+
         // propfull
         private double _balance;
 
@@ -33,6 +35,9 @@ namespace F26W2IntroToClasses
 
         public void Withdraw(double amount)
         {
+            if (amount > Balance)
+                throw new Exception("\nInsufficient funds. Cannot withdraw more than your balance.");
+
             Balance -= amount;
         }
     }

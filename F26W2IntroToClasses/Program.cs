@@ -25,6 +25,28 @@
             Product p7 = new Product() { Name = "Table", Price = 50 };
 
             Student s1 = new Student("John", "Smith");
+
+            Console.WriteLine("\n\n\n");
+
+
+
+
+            Account myAcc = new Account(500);
+            Console.WriteLine("\nBalance = " + myAcc.Balance.ToString("C"));
+
+            myAcc.Deposit(1000);
+            Console.WriteLine("\nBalance = " + myAcc.Balance.ToString("C"));
+
+            try
+            {
+                myAcc.Withdraw(2000);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            Console.WriteLine("\nBalance = " + myAcc.Balance.ToString("C"));
         }
     }
 }
