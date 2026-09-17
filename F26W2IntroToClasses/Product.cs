@@ -26,5 +26,29 @@ namespace F26W2IntroToClasses
             _name = name;
             _price = price;
         }
+
+        // getter / setter for ID
+        public int GetId()
+        {
+            return id;
+        }
+
+        public void SetId(int id)
+        {
+            this.id = id;
+        }
+
+        // property to get / set teh _name
+        public string Name
+        {
+            get { return _name; }
+            set { _name = value; }
+        }
+
+        public double Price
+        {
+            get { return _price; }
+            set { _price = value; }
+        }
     }
 }
